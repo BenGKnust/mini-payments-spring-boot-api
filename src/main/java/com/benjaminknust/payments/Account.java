@@ -24,4 +24,13 @@ public class Account {
     public Long getId() { return id; }
     public String getOwner() { return owner; }
     public BigDecimal getBalance() { return balance; }
+
+        
+    public void withdraw(BigDecimal amount) {
+        this.balance = this.balance.subtract(amount);
+    }
+
+    public void deposit(BigDecimal amount) {
+        this.balance = this.balance.add(amount);
+    }
 }
